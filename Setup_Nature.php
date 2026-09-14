@@ -29,8 +29,8 @@ CreateFinals($TourId);
 CreateDistanceNew($TourId, $TourType, '%', array(array('Parcours',0)));
 
 // Default Target
-CreateTargetFace($TourId, 1, 'Piquet Rouge', 'REG-(U18|U2|S)', '1', 33, 0); // Need to check if "." needed in the regex
-CreateTargetFace($TourId, 2, 'Piquet Blanc', 'REG-U1[35]', '1', 33, 0); // Need to check if "." needed in the regex
+CreateTargetFace($TourId, 1, 'Piquet Rouge', 'REG-(U18|U2|S)', '1', 33, 0);
+CreateTargetFace($TourId, 2, 'Piquet Blanc', 'REG-U1[35]', '1', 33, 0);
 CreateTargetFace($TourId, 3, 'Piquet Rose', 'CLU11%', '1', 33, 0);
 CreateTargetFace($TourId, 4, 'Piquet Découverte', '__DEC', '1', 33, 0);
 

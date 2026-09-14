@@ -2,7 +2,7 @@
 
 /*
 
-3D DEFINITIONS (Target Tournaments)
+Nature DEFINITIONS (Target Tournaments)
 
 */
 function CreateStandardNatureClasses($TourId, $SubRule) {
