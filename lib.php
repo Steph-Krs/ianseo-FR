@@ -17,11 +17,12 @@ function CreateStandardDivisions($TourId, $TourType, $SubRule) {
     $IsIndoor=in_array($TourType, [6,7,8]);
     $isField=in_array($TourType, [9]);
     $is3D=in_array($TourType, [11]);
+    $isNature=in_array($TourType, [51]);
     $isTAENorm=($TourType==3 and $SubRule==13);
     $isTAEPara=(($TourType==3 and $SubRule==14) or ($TourType==6 and $SubRule==4) or ($TourType==7 and $SubRule==4) or ($TourType==8 and $SubRule==4));
     $HasOfficials=(($TourType==3 and in_array($SubRule, [2, 3, 9, 10, 11, 15, 16])) or ($TourType==6 and in_array($SubRule, [2, 3])));
 	$i=1;
-    if($is3D) {
+    if($is3D || $isNature) {
         CreateDivision($TourId, $i++, 'CL', 'Arc Nu', 1);
         CreateDivision($TourId, $i++, 'CO', 'Arc à Poulies Nu', 1);
         CreateDivision($TourId, $i++, 'AD', 'Arc Droit', 1);
@@ -1720,3 +1721,10 @@ require_once(dirname(__FILE__).'/lib-Field.php');
 
 require_once(dirname(__FILE__).'/lib-3D.php');
 
+/*
+
+NATURE DEFINITIONS (Target Tournaments)
+
+*/
+
+require_once(dirname(__FILE__).'/lib-Nature.php');
